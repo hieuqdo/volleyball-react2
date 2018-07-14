@@ -1,0 +1,15 @@
+.overlay {
+  background-color: yellow;
+  border: solid 1px black;
+  height: 100px;
+  width: 100px;
+  opacity: 1;
+  box-sizing: border-box;
+  transition: opacity 500ms 500ms;
+}
+
+.overlay.hide {
+  transition: opacity 500ms 0ms;
+  opacity: 0;
+  height: 0px;
+}
