@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
+import moment from "moment";
 import {
   Button,
   Table,
@@ -60,8 +61,8 @@ export default class ScoreTable extends React.Component {
     let a_total = a.home_score + a.away_score;
     let b_total = b.home_score + b.away_score;
 
-    if (a_total !== b_total) return a_total > b_total;
-    return a.date > b.date;
+    if (a_total !== b_total) return a_total - b_total;
+    return moment(a.date) - moment(b.date);
   };
 
   toggleModal = (header, body, footer) => {
